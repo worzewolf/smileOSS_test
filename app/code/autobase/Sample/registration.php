@@ -1,7 +1,7 @@
 <?php
 
 /**
- *autobase module.
+ *autobase module Sample.
  *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
  *@copyright 2020 worzewolf.
  */

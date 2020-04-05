@@ -60,8 +60,8 @@ $format = $block->getDateFormat() ?: \IntlDateFormatter::SHORT;
                                     <meta itemprop="worstRating" content = "1"/>
                                     <meta itemprop="bestRating" content = "100"/>
                                     <span style="width:<?= $block->escapeHtmlAttr($_vote->getPercent()) ?>%">
-                                                <span itemprop="ratingValue"><?= $block->escapeHtml($_vote->getPercent()/20) ?>,0</span>
-                                            </span>
+                                        <span itemprop="ratingValue"><?= $block->escapeHtml($_vote->getPercent()/20) ?>,0</span>
+                                    </span>
                                 </div>
                             </div>
                         <?php endforeach; ?>

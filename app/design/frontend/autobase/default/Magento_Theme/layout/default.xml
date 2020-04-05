@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header.panel">
-                <block class="Magento\Cms\Block\Block" name="header.links.advanced" before="-">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">header.links.advanced</argument>
-                    </arguments>
-                </block>
-            <container name="top-header-options" htmlTag="div" htmlClass="top-header-options" after="header.links.advanced">
+            <block class="Magento\Cms\Block\Block" name="header.links.advanced" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header.links.advanced</argument>
+                </arguments>
+            </block>
+            <container name="top-header-options" htmlTag="div" htmlClass="top-header-options"
+                       after="header.links.advanced">
                 <block class="Magento\Cms\Block\Block" name="choose.city">
                     <arguments>
                         <argument name="block_id" xsi:type="string">choose.city</argument>
@@ -44,6 +46,3 @@
         <move element="contact-us" destination="header-wrapper" after="-"/>
     </body>
 </page>
-
-
-
