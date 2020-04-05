@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel">
+                <block class="Magento\Cms\Block\Block" name="header.links.advanced" before="-">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header.links.advanced</argument>
+                    </arguments>
+                </block>
+            <container name="top-header-options" htmlTag="div" htmlClass="top-header-options" after="header.links.advanced">
+                <block class="Magento\Cms\Block\Block" name="choose.city">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">choose.city</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">234</argument>
+                <argument name="logo_img_height" xsi:type="number">112</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="header-wrapper">
+            <container name="header-functions" htmlTag="ul" htmlClass="header-functions" after="-"/>
+            <block class="Magento\Cms\Block\Block" name="contact.num.select">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">contact.num.select</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="currency" remove="true"/>
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="store_switcher" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <move element="store_language" destination="top-header-options" before="-"/>
+        <move element="my-account-link" destination="header-functions" before="-"/>
+        <move element="wish-list-link" destination="header-functions" after="my-account-link"/>
+        <move element="minicart" destination="header-functions" after="-"/>
+        <move element="contact-us" destination="header-wrapper" after="-"/>
+    </body>
+</page>
+
+
+

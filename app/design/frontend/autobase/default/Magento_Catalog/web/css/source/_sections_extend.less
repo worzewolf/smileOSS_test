@@ -1,0 +1,42 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .product.info .product.data.items {
+        & > .item.title {
+            margin: 2px 68px 0 0;
+
+            .switch {
+                padding: 4px 0 37px;
+                letter-spacing: .5px;
+                font-size: @font-size__autobase-l;
+                font-weight: @font-weight__bolder;
+                font-family: @font-family_proximaNova-bold;
+                border: 0;
+                background: none;
+
+                &:focus,
+                &:hover {
+                    padding-bottom: 37px;
+                }
+            }
+
+            &.active .switch {
+                border-bottom: 2px solid @autobase_color-torch-red;
+                color: @autobase_color-torch-red;
+
+            }
+        }
+
+        & > .item.content {
+            padding: 18px 0 15px;
+            margin-top: 43px;
+            border-top: 2px solid @autobase_color-solitude;
+        }
+    }
+
+    .product.data.items {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,59 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .fotorama__nav-wrap.fotorama__nav-wrap--vertical{
+        max-width: 160px;
+        width: 100%;
+
+        .fotorama__nav{
+            margin: 0;
+            width: 100% !important;
+
+            .fotorama__nav__shaft{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .fotorama__thumb-border{
+                    display: none;
+                }
+
+                .fotorama__nav__frame{
+                    margin: 0;
+                    box-sizing: border-box;
+                    background-color: transparent;
+                    padding: 9px;
+
+                    &:last-child{
+                        padding-right: 9px !important;
+                    }
+
+                    .fotorama__thumb{
+                        border: 1px solid @autobase_color-white;
+
+                        &:hover{
+                            border: 1px solid @autobase_color-gorse;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fotorama__stage__shaft .fotorama__stage__frame .fotorama__img {
+        left: 53.5%;
+        top: 34.5%;
+    }
+
+    .fotorama__nav-wrap.fotorama__nav-wrap--vertical .fotorama__nav .fotorama__nav__shaft {
+        background: transparent;
+    }
+
+    .fotorama-video-container::after {
+        left: 230px;
+        top: 150px;
+        margin: 0;
+    }
+}

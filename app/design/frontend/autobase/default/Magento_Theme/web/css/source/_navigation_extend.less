@@ -1,0 +1,108 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .sections.nav-sections {
+        margin-bottom: 16px;
+
+        .navigation {
+            padding: 0 20px;
+
+            & > ul {
+                padding: 0;
+                display: flex;
+            }
+        }
+
+        .level0.parent .level-top {
+            width: 234px;
+            background: @autobase_color-torch-red;
+            font-size: @font-size__autobase-l;
+            padding: 0 20px 1px 19px;
+            letter-spacing: .2px;
+            border: 0;
+        }
+
+        .navigation .level0.parent > .level-top > .ui-menu-icon {
+            right: 20px;
+            top: 0;
+
+            &::after {
+                content: '';
+                background: url('@{baseDir}images/header/navigation/menu.png') no-repeat center center;
+                width: 20px;
+                height: 14px;
+            }
+        }
+
+        .level0.parent {
+            width: 234px;
+
+            .submenu {
+                padding: 0;
+            }
+        }
+
+        .level0:not(:first-of-type) {
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            border-right: 1px solid @autobase_color-grey;
+
+            .level-top {
+                position: relative;
+                text-align: center;
+                letter-spacing: 1px;
+                padding-top: 1px;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    content: '';
+                    width: 22px;
+                    height: 24px;
+                    top: calc(~'50% - 12px');
+                }
+            }
+
+            &:nth-child(2) .level-top {
+                padding-left: 25px;
+
+                &::before {
+                    background: url('@{baseDir}images/header/navigation/percent.png') no-repeat center center;
+                    left: -5px;
+                }
+            }
+
+            &:nth-child(3) .level-top {
+                padding-left: 42px;
+
+
+                &::before {
+                    background: url('@{baseDir}images/header/navigation/compare.png') no-repeat center center;
+                    left: 5px;
+                    width: 27px;
+                }
+            }
+
+            &:nth-child(4) .level-top {
+                padding-left: 41px;
+
+                &::before {
+                    background: url('@{baseDir}images/header/navigation/help.png') no-repeat center center;
+                    left: 9px;
+                }
+            }
+
+            &:last-child .level-top {
+                padding-left: 37px;
+
+                &::before {
+                    background: url('@{baseDir}images/header/navigation/news.png') no-repeat center center;
+                    left: 6px;
+                }
+            }
+        }
+    }
+}

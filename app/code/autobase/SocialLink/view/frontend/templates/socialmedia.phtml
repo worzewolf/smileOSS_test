@@ -1,0 +1,19 @@
+<?php
+/**
+ *autobase module SocialLink socialmedia template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+
+<?php $_product = $block->getProduct(); ?>
+<div class="share-block">
+    <span class="share-action"><?= __('Share');; ?></span>
+    <ul class="social-media-icons">
+        <li>
+            <a class="facebook-link" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($_product->getProductUrl());?>&t=<?php echo urlencode($_product->getName())?>" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+    </ul>
+</div>

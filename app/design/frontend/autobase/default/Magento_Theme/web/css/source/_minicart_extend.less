@@ -1,0 +1,59 @@
+//
+//  Common
+//  _____________________________________________
+
+//
+// Sections Variables
+// ---------------------------------------------
+
+@font-size__autobase-header-function-links: @font-size__autobase-s; // 12px
+
+& when (@media-common = true) {
+    .minicart-wrapper .action.showcart {
+        margin-left: 4px;
+
+        .text {
+            font-size: @font-size__autobase-header-function-links;
+            height: max-content;
+            width: max-content;
+            clip: auto;
+            position: relative;
+        }
+
+        &::before {
+            content: '';
+            background: url("@{baseDir}images/header/cart.svg") no-repeat;
+            width: 28px;
+            height: 28px;
+            top: 6px;
+            left: 18px;
+        }
+    }
+
+    .minicart-wrapper .action.showcart.active::before {
+        content: '';
+    }
+
+    .minicart-wrapper .action.showcart .counter.qty {
+        background: @autobase_color-torch-red;
+        color: @autobase_color-white;
+        font-size: @font-size__autobase-xs;
+        border-radius: 50%;
+        position: absolute;
+        top: 6px;
+        right: 7px;
+        padding: 1px 5px;
+        margin: 0;
+        height: auto;
+        min-width: auto;
+        line-height: inherit;
+    }
+
+    .minicart-wrapper .action.showcart:hover {
+        color: @autobase_color-torch-red;
+
+        &::before {
+            background: url("@{baseDir}images/header/cart-hover.svg") no-repeat;
+        }
+    }
+}

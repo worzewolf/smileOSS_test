@@ -1,0 +1,18 @@
+<if args="isAllowed()">
+    <if args="isSalable($row())">
+        <button class="action tocart primary"
+                attr="'data-mage-init': getDataMageInit($row()),
+                      'data-post': getDataPost($row()),
+                       title: getLabel()"
+                type="button">
+            <span text="getLabel()"/>
+        </button>
+    </if>
+    <ifnot args="isSalable($row())">
+        <div class="stock unavailable">
+            <a href="http://magento2testtask.local/productalert/add/stock/product_id/1/uenc/aHR0cDovL21hZ2VudG8ydGVzdHRhc2subG9jYWwvbW90b3Jub2UtbWFzbG8tbW9iaWwtc3VwZXItMzAwMC14MS01dy00MC00bC5odG1s/">
+            <!-- ko i18n: "Contact me after appearance"--><!-- /ko -->
+            </a>
+        </div>
+    </ifnot>
+</if>

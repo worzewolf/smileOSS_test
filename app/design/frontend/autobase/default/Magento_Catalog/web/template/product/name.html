@@ -1,0 +1,16 @@
+<strong if="isAllowed()"
+        class="product-item-name">
+    <a attr="href: $row().url" html="$col.getLabel($row())"/>
+</strong>
+<div class="availability">
+    <!--ko if: $row().is_salable == "" -->
+        <span class="stock out-of-stock">
+            <!-- ko i18n: "Out of stock"--><!-- /ko -->
+        </span>
+    <!-- /ko -->
+    <!--ko ifnot: $row().is_salable == "" -->
+        <span class="stock available">
+            <!-- ko i18n: "In stock"--><!-- /ko -->
+        </span>
+    <!-- /ko -->
+</div>

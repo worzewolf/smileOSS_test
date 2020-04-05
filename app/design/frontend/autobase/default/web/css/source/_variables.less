@@ -1,0 +1,93 @@
+//
+//  Blank theme variables
+//  _____________________________________________
+
+//
+//  Typography
+//  ---------------------------------------------
+
+//  Fonts
+@font-family-name__base: 'Open Sans';
+@font-family-name_font-awesome: Font Awesome\ 5 Free;
+@autostore_icons-font-family: @font-family-name_font-awesome;
+@font-family-name_proximaNova-bold: 'ProximaNova-Bold';
+@font-family_proximaNova-bold: @font-family-name_proximaNova-bold, @font-family__sans-serif;
+@font-family-name_proximaNova-regular: 'ProximaNova-Regular';
+@font-family_proximaNova-regular: @font-family-name_proximaNova-regular, @font-family__sans-serif;
+@font-family-name_myriadPro-regular: 'MyriadPro-Regular';
+@font-family_myriadPro-regular: @font-family-name_myriadPro-regular, @font-family__sans-serif;
+
+//
+//  Sections variables
+//  _____________________________________________
+
+//
+//  Tabs
+//  ---------------------------------------------
+@tab-content__border-top-status: true;
+
+//
+//  Sidebar
+//  ---------------------------------------------
+
+@sidebar__background-color: @color-white-smoke; // Used in cart sidebar, Checkout sidebar, Tier Prices, My account navigation, Rating block background
+
+//
+// Colors
+//_______________________________________________
+
+@autobase_color-white: #ffffff;
+@autobase_color-black: #000000;
+@autobase_color-nobel: #999999;
+@autobase_color-grey: #777777;
+@autobase_color-matterhorn: #555555;
+@autobase_color-solitude: #eff0f3;
+@autobase_color-night-rider: #333333;
+@autobase_color-torch-red: #fb2539;
+@autobase_color-gorse: #ffdc2c;
+@autobase_color-moon-yellow: #ebc712;
+@autobase_color-coral: #ff8941;
+@autobase_color-baltic-sea: #3c3f43;
+@autobase_color-eclipse: #363636;
+@autobase_color-solitude: #eff0f3;
+@autobase_color-san-marino: #53769E;
+@autobase_color-ocean-green: #57ae85;
+@autobase_color-tuna: #474a4e;
+@autobase_color-manatee: #919296;
+@autobase_color-bright-gray: #595c5f;
+
+//
+// Fonts
+//__________________________________________________
+
+@font-weight__bolder: 900;
+@font-size__autobase-xs: 10px;
+@font-size__autobase-s: 12px;
+@font-size__autobase-m: 14px;
+@font-size__autobase-l: 15px;
+@font-size__autobase-xl: 16px;
+@font-size__autobase-xxl: 18px;
+@font-size__autobase-22: 22px;
+@font-size__autobase-4xl: 28px;
+@font-size__autobase-uxl: 39px;
+@font-size__autobase-related-price: 30px;
+@font-size__autobase-recently-viewed-price: 20px;
+
+//
+// Icons
+// _______________________________________________
+
+@autobase-icon-chevron: '\f078';
+@autobase-icon-checkmark: '\f00c';
+@autobase-icon-times: '\f00d';
+
+//
+// Mixin
+// __________________________________________________
+
+.lib-font-awesome_autobase() {
+  font-family: @autostore_icons-font-family;
+  font-weight: @font-weight__bolder;
+  position: absolute;
+}
+

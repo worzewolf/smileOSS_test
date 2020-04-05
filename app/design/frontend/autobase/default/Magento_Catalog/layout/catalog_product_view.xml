@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.price">
+            <block class="Magento\Cms\Block\Block" name="faq.block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">faq.block</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceContainer name="product.info.main">
+            <container name="product.info.main.details" htmlTag="div" htmlClass="product short-details-info"/>
+        </referenceContainer>
+        <move element="product.info.sku" destination="page.main.title" after="-"/>
+        <move element="product.price.final" destination="product.info.main.details" before="-"/>
+        <move element="productalert.stock" destination="product.info.main.details" after="product.price.final"/>
+        <move element="product.info.overview" destination="product.info.main.details" before="product.info.social"/>
+        <move element="product.info.social" destination="product.info.main.details" after="-"/>
+        <move element="catalog.product.related" destination="content" after="product.info.media"/>
+        <referenceBlock name="view.addto.wishlist" remove="true"/>
+        <referenceBlock name="product.info.description">
+            <arguments>
+                <argument name="sort_order" xsi:type="string">30</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
